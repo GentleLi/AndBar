@@ -24,9 +24,10 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.android.supportVersion"
     implementation "com.android.support:design:$rootProject.ext.android.supportVersion"
     implementation "com.android.support:cardview-v7:$rootProject.ext.android.supportVersion"
-
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-
+    implementation "io.reactivex.rxjava2:rxjava:2.1.17"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 }
