@@ -12,7 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.study.andbar.adapter.UserRecyclerAdapter;
+import me.study.andbar.model.GitUser;
 import me.study.andbar.model.User;
+import me.study.andbar.network.UserCallBack;
+import me.study.andbar.proto.GitHubProto;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +44,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 
+
+            }
+        });
+
+        GitHubProto.getUserProfile("GentleLi", new UserCallBack() {
+            @Override
+            public void onSuccess(GitUser gitUser) {
+
+            }
+
+            @Override
+            public void onFailure(String errCode, String errMsg) {
 
             }
         });
