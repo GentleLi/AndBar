@@ -2,15 +2,38 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+
+    signingConfigs {
+        release {
+            keyAlias 'andbar'
+            keyPassword 'andbar'
+            storeFile file('../andbar.jks')
+            storePassword 'andbar'
+        }
+        debug {
+            keyAlias 'andbardebug'
+            keyPassword 'andbardebug'
+            storeFile file('../andbar_debug.jks')
+            storePassword 'andbardebug'
+        }
+    }
+
     defaultConfig {
         applicationId "me.study.andbar"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        signingConfig signingConfigs.release
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -37,4 +60,9 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation(name: 'downloaderlib-release', ext: 'aar')
+    implementation 'com.google.firebase:firebase-core:16.0.0'
+    // Dependency for Google Sign-In
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+
 }
+apply plugin: 'com.google.gms.google-services'

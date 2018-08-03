@@ -1,5 +1,6 @@
 package me.study.andbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -7,8 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.gentler.downloaderlib.manager.DownloaderManager;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +24,7 @@ import me.study.andbar.model.GitUser;
 import me.study.andbar.model.User;
 import me.study.andbar.network.UserCallBack;
 import me.study.andbar.proto.GitHubProto;
+import me.study.andbar.ui.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -82,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
 
 //        DownloaderManager.getInstance().download(null);
 
+
+        mToolBar.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        }, 3000);
+
     }
 
     private void initView() {
@@ -96,8 +111,11 @@ public class MainActivity extends AppCompatActivity {
 
         mToolBar.setNavigationIcon(R.drawable.icon_back);
 
-//        mToolBar.setTitle("标题");
-        CollapsingToolbarLayout collapsingToolbar = findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitleEnabled(false);
+
     }
+
 }
+
+
+
+

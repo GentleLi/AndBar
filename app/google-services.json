@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "34939410370",
+    "firebase_url": "https://andbar-gentlelee.firebaseio.com",
+    "project_id": "andbar-gentlelee",
+    "storage_bucket": "andbar-gentlelee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34939410370:android:34efcf0e445aaac4",
+        "android_client_info": {
+          "package_name": "me.study.andbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34939410370-gk2g0tc8dgo7ogui3konj655lakv69d0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.study.andbar",
+            "certificate_hash": "fc14e0914669108a37a121af00a30be166ab05e1"
+          }
+        },
+        {
+          "client_id": "34939410370-5e6anoul64cdb9gqjqg62g2lfgs15f6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbtq_ClYAAex6JHGbdpVUZB24pzOgFZFI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34939410370-5e6anoul64cdb9gqjqg62g2lfgs15f6o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
