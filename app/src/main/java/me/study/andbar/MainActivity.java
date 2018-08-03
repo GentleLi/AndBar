@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.gentler.downloaderlib.manager.DownloaderManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setData(mUserList);
         mAdapter.notifyDataSetChanged();
+
+//        DownloaderManager.getInstance().download(null);
 
     }
 
